@@ -294,12 +294,13 @@ hostNetwork: false
 priorityClassName: ""
 
 ## SecurityContext holds pod-level security attributes and common container settings.
+## Kubernetes distributions like OpenShift require UID and GID values to be within the range 1001030000-1001039999 by default.
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 securityContext:
-  runAsGroup: 65532
+  runAsGroup: 1001035532
   runAsNonRoot: true
-  runAsUser: 65532
-  fsGroup: 65532
+  runAsUser: 1001035532
+  fsGroup: 1001035532
 
 testFramework:
   image:
