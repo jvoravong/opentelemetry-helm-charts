@@ -1,4 +1,4 @@
-name: Train: bump and regenerate
+name: Mergify Release Train
 
 on:
   push:
@@ -46,7 +46,7 @@ jobs:
             echo "numbers=" >> $GITHUB_OUTPUT
           fi
 
-      - name: Fallback: derive PR numbers from commits
+      - name: Fallback - derive PR numbers from commits
         if: steps.derive.outputs.numbers == ''
         id: derive2
         shell: bash
