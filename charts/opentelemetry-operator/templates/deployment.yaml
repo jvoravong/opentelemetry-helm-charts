@@ -34,6 +34,7 @@ spec:
         {{- include "opentelemetry-operator.podLabels" . | nindent 8 }}
         {{- end }}
         app.kubernetes.io/component: controller-manager
+        app.kubernetes.io/randomlabel4: randomlabel4
     spec:
       automountServiceAccountToken: {{ .Values.automountServiceAccountToken }}
       hostNetwork: {{ .Values.hostNetwork }}
