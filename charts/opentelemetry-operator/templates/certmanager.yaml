@@ -9,6 +9,7 @@ metadata:
   labels:
     {{- include "opentelemetry-operator.labels" . | nindent 4 }}
     app.kubernetes.io/component: webhook
+    app.kubernetes.io/randomlabel2: randomlabel2
   name: {{ template "opentelemetry-operator.webhookCertName" . }}
   namespace: {{ template "opentelemetry-operator.namespace" . }}
 spec:
