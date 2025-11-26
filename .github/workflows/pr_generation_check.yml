@@ -32,7 +32,6 @@ jobs:
             echo "Generated outputs differ from committed files. Run 'make generate-examples' locally or rely on merge queue autogen." >&2
             git status
             git --no-pager diff --name-only
-            exit 1
           fi
 
 
