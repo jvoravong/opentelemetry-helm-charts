@@ -4,13 +4,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    helm.sh/chart: opentelemetry-operator-0.99.2
+    helm.sh/chart: opentelemetry-operator-0.99.4
     app.kubernetes.io/name: opentelemetry-operator
     app.kubernetes.io/version: "0.138.0"
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: opentelemetry-operator
     app.kubernetes.io/instance: example
     app.kubernetes.io/component: controller-manager
+    app.kubernetes.io/randomlabel1: randomlabel1
   name: example-opentelemetry-operator
   namespace: default
 spec:
@@ -25,13 +26,14 @@ spec:
       annotations:
         kubectl.kubernetes.io/default-container: manager
       labels:
-        helm.sh/chart: opentelemetry-operator-0.99.2
+        helm.sh/chart: opentelemetry-operator-0.99.4
         app.kubernetes.io/name: opentelemetry-operator
         app.kubernetes.io/version: "0.138.0"
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/part-of: opentelemetry-operator
         app.kubernetes.io/instance: example
         app.kubernetes.io/component: controller-manager
+        app.kubernetes.io/randomlabel4: randomlabel4
     spec:
       automountServiceAccountToken: true
       hostNetwork: false
